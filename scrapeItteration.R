@@ -1,13 +1,11 @@
 library(rvest)
 library(dplyr)
 
-# Sample URLs (REPLACE with your actual URLs)
+
 urls_df <- data.frame(url = c(
         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/13",
-        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=08/01/37", # Example URL, change this!
-        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/211"  # Example URL, change this!
-        # ... more URLs
-))
+        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=08/01/37",
+        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/211"))
 
 # Function to safely extract text, handling missing elements (unchanged)
 safe_extract <- function(node) {
