@@ -2,10 +2,12 @@ library(rvest)
 library(dplyr)
 
 
-urls_df <- data.frame(url = c(
-        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/13",
-        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=08/01/37",
-        "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/211"))
+# urls_df <- data.frame(url = c(
+#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/13",
+#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=08/01/37",
+#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/211"))
+
+urls_df <- data.frame(read.csv2("FerrisburghParcels.csv", header = FALSE))
 
 # Function to safely extract text, handling missing elements (unchanged)
 safe_extract <- function(node) {
