@@ -2,12 +2,7 @@ library(rvest)
 library(dplyr)
 
 
-# urls_df <- data.frame(url = c(
-#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/13",
-#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=08/01/37",
-#         "https://nemrc.info/web_data/vtferi/camadetailT.php?prop=09/01/211"))
-
-urls_df <- data.frame(read.csv2("FerrisburghParcels.csv", header = FALSE))
+urls_df <- read.csv("FerrisburghAddress.txt", header = FALSE, col.names = "url")
 
 # Function to safely extract text, handling missing elements (unchanged)
 safe_extract <- function(node) {
@@ -71,4 +66,4 @@ for (i in 1:nrow(urls_df)) {
 print(all_data)
 
 # Optional: Write to CSV
-#write.csv(all_data, "all_property_data.csv", row.names = FALSE)
+write.csv(all_data, "all_property_data.csv", row.names = FALSE)
