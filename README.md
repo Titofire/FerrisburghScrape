@@ -1,2 +1,2 @@
 This repository contains a project file I used to figure out how to web-scrape the tax property cards of the little town of Ferrisburgh, Vermont. The three files that work together here, and the ones
-that get the job done, are scrapinginterpretation.r ,FerrisburghAddress.txt and 
+that get the job done, are scrapinginterpretation.r ,FerrisburghAddress.txt. all_property_data.csv contains the correct output of the scraping. All other files are not required. 
